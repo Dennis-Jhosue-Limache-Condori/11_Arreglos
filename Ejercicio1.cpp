@@ -14,6 +14,21 @@ int main(){
             max=A[i];
         }
     }
-    cout<<"El numero mayor es: "<<max;
+    cout<<"--------------------------------------"<<endl;
+    cout<<"El numero mayor es: "<<max<<endl;
+
+    for(int i=0; i<n-1; i++){
+    for(int j=0; j<n-i-1;j++){
+        if(A[j]>A[j+1]){
+            int inter=A[j];
+            A[j]=A[j+1];
+            A[j+1]=inter;
+        }
+    }
+}
+cout<<"Numeros ordenados de menor a mayor: ";
+for(int i=0; i<n; i++){
+    cout<<A[i]<<" ";
+}
     return 0;
 }
